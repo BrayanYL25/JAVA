@@ -18,7 +18,7 @@ public class Main {
 
     Test.getAllSizes(2, 6);
     System.out.println(
-      Test.allEqual(2, 2, 2, 2)
+      Test.allEqual(2, 3, 4, 4)
     );
   }
   public static void showMessage () {
