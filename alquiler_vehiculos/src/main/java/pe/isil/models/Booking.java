@@ -2,9 +2,11 @@ package pe.isil.models;
 
 public class Booking {
   Vehicle vehicle;
+  int days;
 
-  public Booking(Vehicle vehicle) {
+  public Booking(Vehicle vehicle, int days) {
     this.vehicle = vehicle;
+    this.days = days;
   }
 
   public Vehicle getVehicle() {
@@ -16,10 +18,10 @@ public class Booking {
   }
 
   public double calcTotalAmountForBooking() {
-    return vehicle.calcTotalAmount();
+    return vehicle.calcTotalAmount(days);
   }
 
   public void getBookingInfo() {
-    System.out.println(vehicle.toString() + "\nTotal Amount: " +  calcTotalAmountForBooking());
+    System.out.println(vehicle.toString() + "\nDays: " + days + "\nTotal Amount: " +  calcTotalAmountForBooking());
   }
 }

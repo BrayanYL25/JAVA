@@ -3,13 +3,14 @@ package pe.isil.models;
 public class Van extends Vehicle {  // Clase "Camioneta"
   double loadingCapacity;
   double diaryFee;
-  int days;
+  // int days;
   
-  public Van(String plateNumber, String model, String mark, double loadingCapacity, double diaryFee, int days) {
+  public Van(String plateNumber, String model, String mark, double loadingCapacity, double diaryFee) {
     super(plateNumber, model, mark);
     this.loadingCapacity = loadingCapacity;
     this.diaryFee = diaryFee;
-    this.days = days;
+    // , int days
+    // this.days = days;
   }
 
   public double getLoadingCapacity() {
@@ -28,21 +29,21 @@ public class Van extends Vehicle {  // Clase "Camioneta"
     this.diaryFee = diaryFee;
   }
 
-  public int getDays() {
-    return days;
-  }
+  // public int getDays() {
+  //   return days;
+  // }
 
-  public void setDays(int days) {
-    this.days = days;
-  }
+  // public void setDays(int days) {
+  //   this.days = days;
+  // }
 
   @Override
-  public double calcTotalAmount() {
-    return this.days * this.diaryFee;
+  public double calcTotalAmount(int days) {
+    return days * this.diaryFee;
   }
 
   @Override
   public String toString() {
-    return super.toString() + "\nLoading Capacity: " + loadingCapacity + "\nDiary Fee: " + diaryFee + "\nDays: " + days;
+    return super.toString() + "\nLoading Capacity: " + loadingCapacity + "\nDiary Fee: " + diaryFee; // + "\nDays: " + days
   }
 }

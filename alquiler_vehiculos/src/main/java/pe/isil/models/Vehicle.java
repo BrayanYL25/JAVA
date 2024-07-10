@@ -39,4 +39,5 @@ public abstract class Vehicle implements Rentable { // Clase abstracta "Vehiculo
   public String toString() {
     return "Plate number: " + plateNumber + "\nModel: " + model + "\nMark: " + mark;
   }
+  
 }

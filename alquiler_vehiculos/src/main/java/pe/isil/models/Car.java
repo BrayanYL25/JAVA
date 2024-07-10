@@ -2,14 +2,15 @@ package pe.isil.models;
 
 public class Car extends Vehicle { // Clase "Auto"
   int doorsQuantity;
-  int days;
+  // int days;
   double diaryFee;
   
-  public Car(String plateNumber, String model, String mark, int doorsQuantity, double fee, int days){
+  public Car(String plateNumber, String model, String mark, int doorsQuantity, double fee){
     super(plateNumber, model, mark);
     this.doorsQuantity = doorsQuantity;
     this.diaryFee = fee;
-    this.days = days;
+    // , int days
+    // this.days = days;
   }
 
   public int getDoorsQuantity() {
@@ -28,22 +29,22 @@ public class Car extends Vehicle { // Clase "Auto"
     this.diaryFee = diaryFee;
   }
 
-  public int getDays() {
-    return days;
-  }
+  // public int getDays() {
+  //   return days;
+  // }
 
-  public void setDays(int days) {
-    this.days = days;
-  }
+  // public void setDays(int days) {
+  //   this.days = days;
+  // }
 
   @Override
-  public double calcTotalAmount() {
-    return this.days * this.diaryFee;
+  public double calcTotalAmount(int days) {
+    return days * this.diaryFee;
   }
 
   @Override
   public String toString() {
-      return super.toString() + "\nDoors Quantity: " + doorsQuantity + "\nDiary Fee: " + diaryFee + "\nDays: " + days;
+      return super.toString() + "\nDoors Quantity: " + doorsQuantity + "\nDiary Fee: " + diaryFee; //+ "\nDays: " + days
   }
 
 }
